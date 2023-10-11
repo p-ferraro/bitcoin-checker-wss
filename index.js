@@ -61,8 +61,8 @@ io.on("connect", (socket) => {
   socket.emit("price", `${price}`);
   setInterval(function () {
     socket.emit("price", `${price}`);
-    console.log("Emitting Price");
-  }, 300 * 1000);
+    console.log(`Emitting Price:${price}`);
+  }, 10 * 1000);
 });
 
 server.listen(3002, () => {
