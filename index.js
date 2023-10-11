@@ -42,6 +42,13 @@ setInterval(function () {
   }
 }, 300 * 1000);
 
+const io = new Server(server, {
+  cors: {
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST"],
+  },
+});
+
 io.on("connect", (socket) => {
   console.log(`User connected: ${socket.id}`);
   socket.emit("price", `${price}`);
