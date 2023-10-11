@@ -8,6 +8,9 @@ import cors from "cors"
 
 const app = express();
 app.use(cors());
+app.get('/', function (req, res) {
+  res.render('index', {});
+});
 const server = http.createServer(app);
 let price = "";
 
