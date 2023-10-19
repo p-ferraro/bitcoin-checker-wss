@@ -7,9 +7,7 @@ import cors from "cors"
 
 
 const app = express();
-app.use(cors({
-  origin: "https://bitcoin-info-client.vercel.app"
-}));
+app.use(cors());
 app.get('/', function (req, res) {
   res.render('index', {});
 });
